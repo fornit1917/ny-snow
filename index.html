@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery.min.js"></script>
     <script src="js/config.js"></script>
     <script src="js/snow.js"></script>
@@ -10,20 +11,17 @@
 
     <script>
         $(document).ready(function(){
-
-            var rand = Math.random();
-
             function init(cfg) {
-
                 $('body').css('background-color', cfg.bg);
                 $('#capCanvas').remove();
 
                 var k = cfg.w / cfg.h;
                 var h = $(window).height();
                 var w = parseInt(h*k, 10);
+                var ww = $(window).width();
                 cfg.ch = h;
                 cfg.cw = w;
-                cfg.cx1 = ($(window).width() - w)/2;
+                cfg.cx1 = (ww - w)/2;
                 cfg.cx2 = cfg.cx1 + w;
                 cfg.cy1 = 0;
                 cfg.cy2 = h;

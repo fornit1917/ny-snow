@@ -12,7 +12,6 @@ Snow.random = function(min, max) {
 }
 
 Snow.init = function(count, imgConfig, capCtx) {
-
     if (Snow.interval != 0) {
         clearInterval(Snow.interval);
     }
